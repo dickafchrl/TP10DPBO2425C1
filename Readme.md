@@ -1,14 +1,7 @@
 ## JANJI
 Saya Dicka Fachrunaldo Kartamiharja NIM 2407846 mengerjakan Tugas Praktikum 10 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
-## Penjelasan
-
-
-## Alur 
-2. Alur Program (Flow)
-
-Mari lihat alirannya dari awal-akhir ketika pengguna membuat order:
-
+## Alur (Flow)
 A. User membuka form tambah event
 - index.php mendeteksi ?page=add_event.
 - index.php menampilkan add_event.php (view).
@@ -20,20 +13,13 @@ B. User submit form
 - ViewModel validasi & memanggil model
 - Model menjalankan query INSERT ke DB.
 - Redirect kembali ke daftar event.
+
 C. Saat user membuka form tiket
-
-index.php memanggil TicketsViewModel->getAllEvents()
-
-ViewModel meminta data ke model:
-
-Events->readAll()
-
-
-Data event dikirim ke view.
-
-View menampilkan dropdown daftar event.
-
-Jika dropdown tidak muncul → biasanya readAll() salah atau tidak dipanggil.
+- index.php memanggil TicketsViewModel->getAllEvents()
+- ViewModel meminta data ke model:
+  - Events->readAll()
+  - Data event dikirim ke view.
+  - View menampilkan dropdown daftar event.
 
 D. Pemesanan tiket (Orders)
 
@@ -104,3 +90,7 @@ D. Pemesanan tiket (Orders)
                         header.php
 
 ## Dokumentasi
+
+
+https://github.com/user-attachments/assets/2fc21c84-25a1-436f-8c1a-c69a5989e755
+
