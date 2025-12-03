@@ -9,8 +9,8 @@ require_once 'views/template/header.php';
         <input type="text" name="nama_event" value="<?php echo isset($event) ? $event['nama_event'] : ''; ?>" class="border p-2 w-full" required>
     </div>
     <div>
-        <label class="block">lokasi:</label>
-        <input type="Date" name="lokasi" value="<?php echo isset($event) ? $event['lokasi'] : ''; ?>" class="border p-2 w-full" required>
+        <label class="block">Tanggal:</label>
+        <input type="Date" name="tanggal" value="<?php echo isset($event) ? $event['tanggal'] : ''; ?>" class="border p-2 w-full" required>
     </div>
     <div>
         <label class="block">lokasi:</label>

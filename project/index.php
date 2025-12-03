@@ -164,7 +164,7 @@ if ($entity === 'index') {
             $nama_event = $_POST['nama_event'];
             $tanggal = $_POST['tanggal'];
             $lokasi = $_POST['lokasi'];
-            $eventVM->updateTicket($id, $event_id, $tipe_tiket, $harga);
+            $eventVM->updateEvent($id, $nama_event, $tanggal, $lokasi);
             header('Location: index.php?entity=events&action=list');
             break;
         case 'delete':
