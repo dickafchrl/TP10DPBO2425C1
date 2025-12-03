@@ -4,6 +4,66 @@ Saya Dicka Fachrunaldo Kartamiharja NIM 2407846 mengerjakan Tugas Praktikum 10 d
 ## Penjelasan
 
 
+## Alur 
+2. Alur Program (Flow)
+
+Mari lihat alirannya dari awal-akhir ketika pengguna membuat order:
+
+A. User membuka form tambah event
+- index.php mendeteksi ?page=add_event.
+- index.php menampilkan add_event.php (view).
+- User mengisi form.
+
+B. User submit form
+- index.php menerima POST.
+- index.php memanggil:
+- ViewModel validasi & memanggil model
+- Model menjalankan query INSERT ke DB.
+- Redirect kembali ke daftar event.
+C. Saat user membuka form tiket
+
+index.php memanggil TicketsViewModel->getAllEvents()
+
+ViewModel meminta data ke model:
+
+Events->readAll()
+
+
+Data event dikirim ke view.
+
+View menampilkan dropdown daftar event.
+
+Jika dropdown tidak muncul → biasanya readAll() salah atau tidak dipanggil.
+
+D. Pemesanan tiket (Orders)
+
+- User memilih:
+  - user_id
+  - ticket_id
+  - jumlah
+  - tanggal_order
+- index.php memanggil:
+  - OrdersViewModel->addOrder($user_id, $ticket_id, $jumlah, $tanggal)
+  - ViewModel validasi & memanggil model:
+    - Orders->create($user_id, $ticket_id, $jumlah, $tanggal)
+  - Model menjalankan query INSERT.
+        User 
+          ↓
+        index.php (menangani request)
+          ↓
+        ViewModel (validasi + logika)
+          ↓
+        Model (query)
+          ↓
+        Database (event/ticket/order)
+          ↓
+        Model
+          ↓
+        ViewModel
+          ↓
+        View (tampilan kembali ke user)
+
+
 ## Struktur Program
         C:.
         │   Readme.md
