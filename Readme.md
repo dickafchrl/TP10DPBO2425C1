@@ -47,6 +47,7 @@ D. Pemesanan tiket (Orders)
   - ViewModel validasi & memanggil model:
     - Orders->create($user_id, $ticket_id, $jumlah, $tanggal)
   - Model menjalankan query INSERT.
+ 
         User 
           ↓
         index.php (menangani request)
