@@ -8,7 +8,7 @@ $entity = isset($_GET['entity']) ? $_GET['entity'] : 'index';
 $action = isset($_GET['action']) ? $_GET['action'] : 'list';
 
 if ($entity === 'index') {
-    require_once 'home.php';
+    require_once 'views/home.php';
 } else if ($entity === 'users') {
     $userVM = new UserViewModel();
 

@@ -91,6 +91,7 @@
 <body>
 
     <nav>
+        <a href="index.php?entity=index">Home</a>
         <a href="index.php?entity=users">Pelanggan</a>
         <a href="index.php?entity=tickets">Ticket</a>
         <a href="index.php?entity=orders">Pesanan</a>
